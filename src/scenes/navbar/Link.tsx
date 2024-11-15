@@ -11,7 +11,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
     const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
     return (
         <AnchorLink
-            className={`${selectedPage === lowerCasePage ? 'text-primary-500' : 'text-primary-300'} transition duration-500 hover:text-primary-300`}
+            className={`${selectedPage === lowerCasePage ? 'text-primary-500' : ''} transition duration-500 hover:text-primary-300`}
             href={`#${selectedPage}`}
             onClick={() => setSelectedPage(lowerCasePage)}
         >
