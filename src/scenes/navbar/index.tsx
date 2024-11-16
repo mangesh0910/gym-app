@@ -49,6 +49,18 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                     )}
                 </div>
             </div>
+            {/* Mobile Menu Modal */}
+            {!isAboveMediumScreen && isMenuToggle && <div className='h-full z-40 w-[300px] bg-primary-100 shadow-md fixed top-0 right-0'>
+                <div className='flex justify-end p-8'>
+                    <XMarkIcon className='h-10 w-10 text-gray-700' onClick={() => setIsMenuToggle(false)} />
+                </div>
+                <div className='flex flex-col gap-10 ml-[33%] text-2xl'>
+                    <Link page='Home' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                    <Link page='Benefits' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                    <Link page='Our Classes' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                    <Link page='Contact Us' selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                </div>
+            </div>}
         </nav>
     )
 }
