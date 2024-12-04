@@ -24,7 +24,10 @@ const Home = ({ setSelectedPage }: Props) => {
             className='h-full'
         >
             {/* OUTER PARENT */}
-            <div className='md:h-5/6 sm:h-full'>
+            <motion.div
+                className='md:h-5/6 sm:h-full'
+                onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+            >
                 {/* PARENT */}
                 <div className='w-5/6 md:flex mx-auto justify-between items-center pt-32 '>
                     {/* LEFT */}
@@ -73,7 +76,7 @@ const Home = ({ setSelectedPage }: Props) => {
                         <img alt='HomePageGraphic' src={HomePageGraphic} />
                     </div>
                 </div>
-            </div>
+            </motion.div>
             {
                 isAboveMediumScreen && <div className='w-full bg-primary-100 flex h-1/6 '>
                     <div className='justify-start gap-20 items-center flex w-5/6 mx-auto'>
