@@ -21,7 +21,7 @@ const Home = ({ setSelectedPage }: Props) => {
             id='home'
         >
             {/* HEADER & IMAGE */}
-            <div className='md:flex w-5/6 mx-auto items-start h-3/4 justify-items-start mt-32'>
+            <div className='md:flex w-5/6 mx-auto items-start h-3/4 justify-items-start md:mt-32'>
                 {/* HEADING */}
                 <div>
                     {/* ACTUAL HEADING */}
